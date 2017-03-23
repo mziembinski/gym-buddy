@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>gym-buddy test</title>
+
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+    <script src="../../web-component-tester/browser.js"></script>
+
+    <link rel="import" href="../gym-buddy.html">
+  </head>
+  <body>
+    <test-fixture id="basic">
+      <template>
+        <gym-buddy></gym-buddy>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('gym-buddy', function() {
+        test('instantiating the element works', function() {
+          var element = fixture('basic');
+          assert.equal(element.is, 'gym-buddy');
+        });
+      });
+    </script>
+  </body>
+</html>

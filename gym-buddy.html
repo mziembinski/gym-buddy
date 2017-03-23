@@ -1,0 +1,49 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<!--
+`gym-buddy`
+Gym Buddy
+
+@demo demo/index.html
+-->
+
+<dom-module id="gym-buddy">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[buddyheight]]</h2>
+
+    <svg height="500" width="300">
+        <circle cx="150" cy="50" r="40" stroke="black" stroke-width="2" fill="white" />
+        <polygon id="polygon" points="100,90 200,90 150,190" style="fill:white;stroke:black;stroke-width:{{buddystroke}}" />
+        <polygon points="100,90 140,90 120,130" style="fill:white;stroke:black;stroke-width:2" />
+        <polygon points="160,90 200,90 180,130" style="fill:white;stroke:black;stroke-width:2" />
+        <polygon points="130,150 170,150 150,190" style="fill:white;stroke:black;stroke-width:2" />
+        <polygon points="125,190 175,190 150,230" style="fill:white;stroke:black;stroke-width:2" />
+    </svg>
+
+
+  </template>
+
+  <script>
+    Polymer({
+
+      is: 'gym-buddy',
+
+      properties: {
+        prop1: {
+          type: String,
+          value: 'gym-buddy',
+        },
+        buddystroke: {
+          type: Number,
+          value: 5,
+        },
+      },
+
+    });
+  </script>
+</dom-module>
